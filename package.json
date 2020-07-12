@@ -1,0 +1,24 @@
+{
+  "name": "typescript-sample",
+  "version": "1.0.0",
+  "description": "TypeScript学習用リポジトリ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsubasa1122/typescript-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsubasa1122/typescript-sample/issues"
+  },
+  "homepage": "https://github.com/tsubasa1122/typescript-sample#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4",
+    "typescript": "^3.9.6"
+  }
+}

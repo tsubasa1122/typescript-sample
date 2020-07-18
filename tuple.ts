@@ -1,7 +1,7 @@
 const person: {
   name: string;
   age: number;
-  role: [integer, string];
+  role: [number, string];
 } = {
   name: 'nakano',
   age: 30,

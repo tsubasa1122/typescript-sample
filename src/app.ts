@@ -1,24 +1,29 @@
-const hobbies = ['Sports', 'Cooking'];
+class Department {
+  name: string;
+  private employees: string[] = [];
 
-const activeHobbies = ['Hiking'];
+  constructor(n: string) {
+    this.name = n;
+  }
 
-activeHobbies.push(...hobbies);
+  describe() {
+    console.log("Department: " + this.name);
+  }
 
-const person = {
-  name: 'Max',
-  age: 30,
-};
+  addEmployee(employee: string) {
+    this.employees.push(employee);
+  }
 
-const copidPerson = {
-  ...person,
-};
+  printEmployeeInformation() {
+    console.log(this.employees);
+    console.log(this.employees.length);
+  }
+}
 
-const add = (...numbers: number[]) => {
-  return numbers.reduce((curResult, curValue) => {
-    return curResult + curValue;
-  }, 0);
-};
+const accounting = new Department("Accounting");
+accounting.addEmployee("Max");
+accounting.addEmployee("Tom");
+// accounting.employees[0] = "Lee";
+accounting.printEmployeeInformation();
 
-const addedNumbers = add(5, 10, 2, 3.7);
-
-console.log(addedNumbers);
+accounting.describe();

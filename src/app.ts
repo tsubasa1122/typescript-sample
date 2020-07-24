@@ -1,9 +1,14 @@
-function add(n1: number, n2: number) {
-  return n1 + n2;
-}
+const hobbies = ['Sports', 'Cooking'];
 
-function printResult(num: number): void {
-  console.log("Result: " + num);
-}
+const activeHobbies = ['Hiking'];
 
-printResult(add(5, 12));
+activeHobbies.push(...hobbies);
+
+const person = {
+  name: 'Max',
+  age: 30,
+};
+
+const copidPerson = {
+  ...person,
+};

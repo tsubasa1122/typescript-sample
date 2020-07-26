@@ -1,22 +1,21 @@
-interface Greetable {
-  readonly name: string;
-
-  greet(phrase: string): void;
-}
-
-class Person implements Greetable {
+type Admin = {
   name: string;
-  age = 20;
-
-  constructor(n: string) {
-    this.name = n;
-  }
-
-  greet(phrase: string) {
-    console.log(phrase);
-  }
+  privileges: string[];
 }
-let user1: Greetable;
 
-user1 = new Person('Max');
-console.log(user1);
+type Employee = {
+  name: string;
+  startDate: Date;
+}
+
+type ElevatedEmploee = Admin & Employee;
+
+const e1: ElevatedEmploee = {
+  name: 'Max',
+  privileges: ['create-server'],
+  startDate: new Date(),
+}
+
+type Combinable = string | number;
+type Numeric = number | boolean;
+type Universal = Combinable & Numeric;

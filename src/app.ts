@@ -95,3 +95,12 @@ moveAnimal({ type: 'bird', flyingSpeed: 10 });
 const userInputElement = document.getElementById("user-input")! as HTMLInputElement;
 
 userInputElement.value = "こんにちは";
+
+interface ErrorContainer {
+  [prop: string]: string;
+}
+
+const errorBag: ErrorContainer = {
+  1: '正しいメールアドレスではありません。',
+  username: 'ユーザー名に記号を含めることは出来ません。',
+};

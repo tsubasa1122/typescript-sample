@@ -104,3 +104,15 @@ const errorBag: ErrorContainer = {
   1: '正しいメールアドレスではありません。',
   username: 'ユーザー名に記号を含めることは出来ません。',
 };
+
+
+const fetchedUserData = {
+  id: 'u1',
+  name: 'user1',
+  job: {
+    title: 'developer',
+    description: 'typescript',
+  },
+};
+
+console.log(fetchedUserData ?.job ?.title);
